@@ -1,0 +1,21 @@
+import pandas as pd
+
+data = {
+    'A': [1, 2, None, 4, 5],
+    'B': ['foo', 'bar', None, 'baz', 'qux'],
+    'C': ['alpha', 'beta', 'gamma', 'delta', 'epsilon']
+}
+
+df = pd.DataFrame(data)
+
+missing_data = df.isna()
+
+
+df_dropna = df.dropna()
+
+
+df_fillna = df.fillna(value=0)
+
+
+duplicates = df.duplicated()
+df_drop_duplicates = df.drop_duplicates()
