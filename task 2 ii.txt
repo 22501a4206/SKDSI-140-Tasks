@@ -1,0 +1,17 @@
+import matplotlib.pyplot as plt
+
+x_data = [1, 2, 3, 4, 5]
+y_data = [5, 7, 3, 8, 2]
+
+plt.figure(figsize=(8, 6))
+plt.scatter(x_data, y_data, color='blue', marker='o', label='Data Points')
+
+plt.xlabel('X Axis Label')
+plt.ylabel('Y Axis Label')
+plt.title('Scatter Plot of Two One-Dimensional Data Series')
+
+plt.legend()
+
+plt.grid(True)
+plt.tight_layout()
+plt.show()
