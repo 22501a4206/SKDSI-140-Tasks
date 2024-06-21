@@ -1,0 +1,9 @@
+import pandas as pd
+
+date_range_utc = pd.date_range(start='2024-01-01', periods=5, freq='D', tz='UTC')
+
+date_range_ny = date_range_utc.tz_convert('America/New_York')
+
+combined_index = pd.concat([date_range_utc, date_range_ny])
+
+print(combined_index)
