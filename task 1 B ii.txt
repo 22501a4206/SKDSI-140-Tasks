@@ -1,0 +1,30 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+data = {'Category': ['A', 'B', 'C', 'D'],
+        'Value1': [10, 20, 30, 40],
+        'Value2': [15, 25, 35, 45],
+        'Value3': [20, 30, 40, 50]}
+df = pd.DataFrame(data)
+df.set_index('Category', inplace=True)
+
+
+df.plot(kind='bar')
+plt.title('Grouped Bar Plot')
+plt.xlabel('Category')
+plt.ylabel('Values')
+plt.xticks(rotation=0)
+plt.legend(title='Values', bbox_to_anchor=(1, 1))
+plt.tight_layout()
+plt.show()
+
+
+df.plot(kind='bar', stacked=True)
+plt.title('Stacked Bar Plot')
+plt.xlabel('Category')
+plt.ylabel('Values')
+plt.xticks(rotation=0)
+plt.legend(title='Values', bbox_to_anchor=(1, 1))
+plt.tight_layout()
+plt.show()
