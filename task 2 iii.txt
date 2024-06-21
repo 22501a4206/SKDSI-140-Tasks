@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+
+data = pd.DataFrame({
+    'Category': ['A', 'B', 'C', 'A', 'B', 'C', 'A', 'B', 'C'],
+    'Value': [1, 4, 2, 5, 7, 3, 8, 6, 9]
+})
+
+plt.figure(figsize=(8, 6))
+sns.boxplot(x='Category', y='Value', data=data)
+plt.title('Box Plot of Value by Category')
+plt.xlabel('Category')
+plt.ylabel('Value')
+plt.show()
