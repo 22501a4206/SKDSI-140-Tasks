@@ -1,0 +1,16 @@
+import pandas as pd
+
+period_range = pd.period_range(start='2024-01', end='2024-06', freq='M')
+
+print("Period Range:")
+print(period_range)
+print()
+
+first_period = period_range[0]
+second_period = period_range[1]
+
+added_period = first_period + 2
+print(f"Adding 2 periods to {first_period}: {added_period}")
+
+subtracted_period = second_period - 1
+print(f"Subtracting 1 period from {second_period}: {subtracted_period}")
