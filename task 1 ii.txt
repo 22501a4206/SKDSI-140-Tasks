@@ -1,0 +1,19 @@
+import pandas as pd
+
+
+arrays = [['A', 'A', 'B', 'B'], [1, 2, 1, 2]]
+index = pd.MultiIndex.from_arrays(arrays, names=['First', 'Second'])
+series = pd.Series([10, 20, 30, 40], index=index)
+
+
+outer_level = series['A']  
+inner_level = series.loc[('A', 1)]  
+
+print("Series with hierarchical indexing:")
+print(series)
+
+print("\nSubset of data at outer level 'A':")
+print(outer_level)
+
+print("\nSubset of data at inner level 'A' and '1':")
+print(inner_level)
