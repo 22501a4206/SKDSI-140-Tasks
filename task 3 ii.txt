@@ -1,0 +1,5 @@
+import pandas as pd
+
+date_index = pd.date_range(start='2024-06-01', periods=10)
+
+print(date_index)
